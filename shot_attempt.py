@@ -1,6 +1,7 @@
 import pandas as pd
 import pprint as pprint
 import regex as re
+from pathlib import Path
 
 #non corner 3's
 # 3pt line is 23.75 ft from the center of the hoop
@@ -18,6 +19,8 @@ import regex as re
 
 
 def shot_calculator(file):
+
+    csv_file = open(file)
 
     shots_df = pd.read_csv(file)
 
@@ -323,6 +326,9 @@ def shot_calculator(file):
 
         overall_shot[team]["overall eFG"] = format(overall_eFG, '.3f')
 
+    # converts the dictionary back to dataframe to be converted into CSV
+    final_shots_df = pd.DataFrame(overall_shot)
+    final_shots_df.to_csv(file.split(".")[0] + "_converted.csv")
 
     pprint.pprint(overall_shot, depth=4)
 

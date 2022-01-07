@@ -1,24 +1,25 @@
-#OKC Thunders Data Science problem
+# OKC Thunders Data Science problem
 
-#Tools used:
+# Tools used:
 - Pycharm
 - Python 3.8
 - Regex
 - Pandas
 
-###Calculated 
+### Calculated 
 - 2PT eFG, zone percentage
 - C3 eFG, zone percentage
 - NC3 eFG, zone percentage
 - 3PT eFG, zone percentage
 - overall eFG
   
-##How to start 
+## How to start 
 ### Install requirements.txt
 ```pip install requirements.txt```
 
+## It will also output a CSV file alongside a print output
 
-##Output result:
+## Output result:
 ```
 {'Team A': {'2PT eFG': '0.376',
             '2PT shot attempt percentage': '0.376',
@@ -59,3 +60,4 @@
             'overall shot attempts': 279,
             'overall shots made': 115}}
 ```
+
